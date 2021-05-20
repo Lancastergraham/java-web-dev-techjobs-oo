@@ -107,7 +107,7 @@ public class Job {
             return "OOPS! This job does not seem to exist.";
         }
 
-        if (this.getName() == null || this.getName() == "") {
+        if ( this.getName() == "" || this.getName() == null) {
             theName = "Data not available";
         } else {
             theName = this.getName();
