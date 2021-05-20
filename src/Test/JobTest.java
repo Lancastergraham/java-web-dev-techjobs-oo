@@ -15,6 +15,7 @@ public class JobTest {
     static Job o4;
     static Job o5;
     static Job o6;
+    static Job o7;
 
     @BeforeAll
     public static void setup() {
@@ -29,6 +30,12 @@ public class JobTest {
         o6 = new Job("Test", new Employer("Test Start Up"), new Location(
                 "Test Field, MO"), new PositionType("Tester"),
                 new CoreCompetency("Testing"));
+        o7 = new Job();
+    }
+
+    @Test
+    public void defaultConstructorTest() {
+        assertEquals(7, o7.getId());
     }
 
     @Test

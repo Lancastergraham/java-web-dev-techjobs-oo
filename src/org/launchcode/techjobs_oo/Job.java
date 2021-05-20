@@ -107,31 +107,31 @@ public class Job {
             return "OOPS! This job does not seem to exist.";
         }
 
-        if ( this.getName() == "" || this.getName() == null) {
+        if (name == null || name.equals("")) {
             theName = "Data not available";
         } else {
             theName = this.getName();
         }
 
-        if (this.getEmployer() == null || this.getEmployer().toString() == "") {
+        if (employer == null || employer.getValue().equals("")) {
             theEmployer = "Data not available";
         } else {
             theEmployer = this.getEmployer().toString();
         }
 
-        if (this.getLocation() == null || this.getLocation().toString() == "") {
+        if (location == null || location.getValue().equals("")) {
             theLocation = "Data not available";
         } else {
             theLocation = this.getLocation().toString();
         }
 
-        if (this.getPositionType() == null || this.getPositionType().toString()== "") {
+        if (positionType == null || positionType.getValue().equals("")) {
             thePosition = "Data not available";
         } else {
             thePosition = this.getPositionType().toString();
         }
 
-        if (this.getCoreCompetency() == null || this.getCoreCompetency().toString() == "") {
+        if (coreCompetency == null || coreCompetency.getValue().equals("")) {
             theCoreCompetency = "Data not available";
         } else {
             theCoreCompetency = this.getCoreCompetency().toString();
