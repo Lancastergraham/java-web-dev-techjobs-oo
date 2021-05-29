@@ -103,35 +103,35 @@ public class Job {
         String thePosition;
         String theCoreCompetency;
 
-        if (getName() == null && getLocation() == null && getEmployer() == null && getPositionType() == null && getCoreCompetency() == null) {
+        if (Objects.isNull(this.getName()) && Objects.isNull(this.getEmployer()) && Objects.isNull(this.getLocation()) && Objects.isNull(this.getPositionType()) && Objects.isNull(this.getCoreCompetency())) {
             return "OOPS! This job does not seem to exist.";
         }
 
-        if (name == null || name.equals("")) {
+        if (Objects.isNull(this.getName()) || name.equals("")) {
             theName = "Data not available";
         } else {
             theName = this.getName();
         }
 
-        if (employer == null || employer.getValue().equals("")) {
+        if ( employer.getValue().equals("") || Objects.isNull(this.getEmployer())) {
             theEmployer = "Data not available";
         } else {
             theEmployer = this.getEmployer().toString();
         }
 
-        if (location == null || location.getValue().equals("")) {
+        if (Objects.isNull(this.getLocation()) || location.getValue().equals("")) {
             theLocation = "Data not available";
         } else {
             theLocation = this.getLocation().toString();
         }
 
-        if (positionType == null || positionType.getValue().equals("")) {
+        if (Objects.isNull(this.getPositionType()) || positionType.getValue().equals("")) {
             thePosition = "Data not available";
         } else {
             thePosition = this.getPositionType().toString();
         }
 
-        if (coreCompetency == null || coreCompetency.getValue().equals("")) {
+        if (Objects.isNull(this.getCoreCompetency())|| coreCompetency.getValue().equals("")) {
             theCoreCompetency = "Data not available";
         } else {
             theCoreCompetency = this.getCoreCompetency().toString();

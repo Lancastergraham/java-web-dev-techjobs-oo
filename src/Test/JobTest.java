@@ -6,6 +6,8 @@ import org.junit.jupiter.api.Test;
 
 import org.launchcode.techjobs_oo.*;
 
+import java.util.Objects;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 public class JobTest {
@@ -125,4 +127,5 @@ public class JobTest {
     public void onlyID() {
         assertEquals("OOPS! This job does not seem to exist.", o2.toString());
     }
+
 }
